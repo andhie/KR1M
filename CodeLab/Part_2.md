@@ -8,7 +8,7 @@ Start Part 2 by download resources required for this section
 
 Images are a quick way for users understanding a context. i.e. photo of your friend instead of name.
 
-1. Add an ImageView at the left side of the existing Name and Address `TextView`
+1. In `list_item_kedai.xml`, add an ImageView at the left side of the existing Name and Address `TextView`
 2. Set a fixed height on the ImageView, 40dp x 40dp. With 16dp space from the `TextView`
 3. Set the ImageView to display the `@drawable/kedai`
 
@@ -33,11 +33,13 @@ When users click on a Kedai list item, we want to start a new screen that displa
 
 1. Create a new 'Empty Activity', call it `KedaiDetailActivity`
 2. Change your `MainActivity`'s `onItemClicked` to launch the new `KedaiDetailActivity` screen
-3. Display the Kedai Name, Address, State, and telephone number.
-4. When users click on the telephone number, launch the Telephony app of the device.
+3. Display the `@drawable/kedai` at the top. Set its width `match_parent`, height: `wrap_content`. Adjust `android:scaleType` accordingly.
+4. Display the Kedai Name, Address, State, and telephone number.
+5. The telephone number should be displayed with the `@drawable/ic_call`
+6. When users click on the telephone number, launch the Telephony app of the device.
   - Hint : Use `Intent.ACTION_DIAL`
 
-# LVL.UP
+# ADVANCED
 
 ## ActionMode
 
