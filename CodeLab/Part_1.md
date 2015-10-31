@@ -4,7 +4,7 @@
 
 1. Create a new Android application named 'KR1M'
 2. Create an 'Empty Activity'
-  - If you have created a 'Blank Activity' instead, you can delete the java and layout resources created for you. 
+  - If you have created a 'Blank Activity' instead, you can delete the java and layout resources created for you.
   - Then right click on `app/src/main/java`, select `New` -> `Activity` -> `Empty Activity`
 
 ## ListView
@@ -33,7 +33,8 @@ public class Kedai {
 
 1. Create a new Java file named `KedaiAdapter.java`
 2. Let KedaiAdapter `extends ArrayAdapter<Kedai>`
-3. Override `getView` method in CustomAdapter
+3. Create an XML layout named `list_item_kedai.xml` that contains 2 TextView (placed top and bottom). The first TextView will be our Kedai name. The 2nd TextView will be the address.
+4. Override `getView` method in CustomAdapter
   - TODO 1: inflate a list item view, display Kedai's data in the View
   - TODO 2: Improvements: use the "convertView" instead of always inflating a new list item
   - TODO 3: Advanced: use the ViewHolder pattern to speed up scrolling even further. Refer to [Making ListView Scrolling Smooth](https://developer.android.com/training/improving-layouts/smooth-scrolling.html#ViewHolder)
