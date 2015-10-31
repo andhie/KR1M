@@ -3,7 +3,9 @@
 ## Creating KR1M Project
 
 1. Create a new Android application named 'KR1M'
-2. Create a 'Blank Activity'
+2. Create an 'Empty Activity'
+  - If you have created a 'Blank Activity' instead, you can delete the java and layout resources created for you. 
+  - Then right click on `app/src/main/java`, select `New` -> `Activity` -> `Empty Activity`
 
 ## ListView
 
