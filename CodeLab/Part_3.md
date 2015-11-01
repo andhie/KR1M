@@ -18,8 +18,13 @@ The whole architecture after the end of this lesson will be:
 AsyncTask continues to run even after Activity is destroyed, holding a reference to any Views (such as onPostExecute, `TextView#setText()` is used) will indirectly leaks the whole Activity.
 
 1. Create a new Java file, name it `FetchKedaiService.java`
-2. Let `FetchKedaiService extends IntentService` and implement `onHandleIntent()` method
-3. Move parts of the `AsyncTask` code that related to fetching data from Internet until the point we get the JSON string (i.e `HttpURLConnection` related).
+2. Open your `AndroidManifest.xml` and declare your service.
+  - Note: If you did not declare your Service, it will not run.
+  ```xml
+  <service android:name=".FetchKedaiService" />
+  ```
+3. Let `FetchKedaiService extends IntentService` and implement `onHandleIntent()` method
+4. Move parts of the `AsyncTask` code that related to fetching data from Internet until the point we get the JSON string (i.e `HttpURLConnection` related).
   - We will be sending this JSON `String` back to the Activity via `LocalBroadcastManager` later
 
 ## Modify AsyncTask to only handle JSON parsing
