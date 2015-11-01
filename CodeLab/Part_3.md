@@ -39,7 +39,12 @@ AsyncTask continues to run even after Activity is destroyed, holding a reference
 2. In the `onReceive()` method, get the JSON String data from the `Intent` given. You can use the key "kedai_json". Start our AsyncTask by passing the JSON String into the AsyncTask execute().
 `new CustomAsyncTask.execute(kedaiJsonString)`
   - Later, You will be sending a broadcast by creating an `Intent` where you already already did `putExtras("kedai_json", kedaiJsonString)`
-3. Use the `LocalBroadcastManager` to register `MyBroadcastReceiver` with a `new IntentFilter("ACTION_DATA_GET")`
+3. Declare a global variable for `MyBroadcastReceiver`
+  - For example
+  ```java
+  BroadcastReceiver broadcastReceiver = new MyBroadcastReceiver();
+  ```
+4. Use the `LocalBroadcastManager` to register `MyBroadcastReceiver` with a `new IntentFilter("ACTION_DATA_GET")`
   - Register in `Activity`'s `onStart()` method
   - Unregister in `Activity`'s `onStop()`
   - You may refer to [how to use LocalBroadcastManager?](https://stackoverflow.com/questions/8802157/how-to-use-localbroadcastmanager) on StackOverFlow
