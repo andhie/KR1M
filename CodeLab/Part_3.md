@@ -18,7 +18,8 @@ The whole architecture after the end of this lesson will be:
 AsyncTask continues to run even after Activity is destroyed, holding a reference to any Views (such as onPostExecute, `TextView#setText()` is used) will indirectly leaks the whole Activity.
 
 1. Create a new Java file, name it `FetchKedaiService.java`
-2. Open your `AndroidManifest.xml` and declare your service.
+  - Alternatively, you can right-click, `New` -> `Service` -> `Service (IntentService)`
+2. Open your `AndroidManifest.xml` and declare your service if its not there.
   - Note: If you did not declare your Service, it will not run.
   ```xml
   <service android:name=".FetchKedaiService" />
