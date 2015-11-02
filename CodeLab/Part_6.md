@@ -27,6 +27,6 @@ We will trigger a TTS via a menu options
 2. In this activity, it only contains a single `TextView`
 3. Set this `TextView` to display the string `@string/about_us`
 4. Create a menu, `res/menu_about_us`
-5. Create a menu item, set it to `always` show in the ActionBar, with title `Speak` and ID of `@+id/action_speak`
+5. Create a menu item, set it to `always` show in the ActionBar, with title `Speak`, an ID of `@+id/action_speak` and an icon of `@drawable/ic_tts`
 6. Inflate the menu and handle speak item selected by speaking the content of About Us
 7. Implement any callback as appropriate to support TTS.
